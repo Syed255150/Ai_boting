@@ -1,0 +1,5 @@
+Linear Regression - R² Score: 0.7469629925504755
+Polynomial Degree 2 - R² Score: 0.7517769785513999
+Polynomial Degree 3 - R² Score: 0.7523917541359917
+Polynomial Degree 4 - R² Score: 0.752492854096301
+Polynomial Degree 5 - R² Score: 0.7525050794705261
