@@ -1,0 +1,65 @@
+# Regression Analysis with California Housing Dataset
+
+## Overview
+
+This project implements various regression models to analyze the California Housing dataset using **Linear Regression, Polynomial Regression, Ridge Regression, Lasso Regression, and Random Forest Regression**. The goal is to predict housing prices based on selected features.
+
+## Dataset
+
+The dataset used is the **California Housing Prices** dataset, available in **scikit-learn**. It contains housing-related features, and the target variable is the **median house value**.
+
+## Implemented Models
+
+1. **Linear Regression**
+2. **Polynomial Regression (Degree 2 & 3)**
+3. **Ridge Regression (L2 Regularization)**
+4. **Lasso Regression (L1 Regularization)**
+5. **Random Forest Regressor**
+
+## Preprocessing Steps
+
+- Selected **first 3 features** from the dataset.
+- Applied **StandardScaler** to normalize feature values.
+- Split data into **80% training and 20% testing sets**.
+
+## Model Evaluation
+
+Each model is evaluated using **R² Score** (coefficient of determination), which indicates how well the model explains the variance in housing prices.
+
+- **Higher R² Score** = Better model performance.
+- Overfitting is checked by comparing **train vs. test R² scores**.
+- **Cross-validation** is used to verify consistency.
+
+## Results
+
+- **Linear Regression:** Baseline performance.
+- **Polynomial Regression:** Improves results but may overfit at high degrees.
+- **Ridge & Lasso Regression:** Helps in reducing overfitting.
+- **Random Forest:** Provides strong predictive power with non-linearity handling.
+
+## How to Run the Code
+
+1. Install dependencies:
+   ```sh
+   pip install numpy matplotlib scikit-learn
+   ```
+2. Run the script:
+   ```sh
+   python script.py
+   ```
+
+## Visualization
+
+- A **plot of Polynomial Regression performance** is generated to show R² Scores for different polynomial degrees.
+
+## Conclusion
+
+- **Linear Regression** is simple but limited.
+- **Polynomial Regression** captures non-linearity but risks overfitting.
+- **Regularized models (Ridge, Lasso)** improve generalization.
+- **Random Forest performs best**, leveraging non-linear relationships.
+
+## Author
+
+Developed by [Sabhi-ul-hassan]
+
