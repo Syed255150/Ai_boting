@@ -1,65 +1,47 @@
-# Regression Analysis with California Housing Dataset
+# Regression Analysis using Linear and Polynomial Regression
 
 ## Overview
+This project demonstrates the implementation of Linear Regression and Polynomial Regression using Python's `scikit-learn` library. The goal is to fit a regression model to a generated dataset, visualize the results, and evaluate the model's performance using metrics such as Mean Squared Error (MSE) and R² Score.
 
-This project implements various regression models to analyze the California Housing dataset using **Linear Regression, Polynomial Regression, Ridge Regression, Lasso Regression, and Random Forest Regression**. The goal is to predict housing prices based on selected features.
+## Technologies Used
+- Python
+- NumPy
+- Matplotlib
+- Scikit-learn
 
 ## Dataset
+A synthetic dataset is generated using the equation:
 
-The dataset used is the **California Housing Prices** dataset, available in **scikit-learn**. It contains housing-related features, and the target variable is the **median house value**.
+y = 4 + 3X + noise
 
-## Implemented Models
+where `X` is randomly generated, and `noise` is added to simulate real-world variations.
 
-1. **Linear Regression**
-2. **Polynomial Regression (Degree 2 & 3)**
-3. **Ridge Regression (L2 Regularization)**
-4. **Lasso Regression (L1 Regularization)**
-5. **Random Forest Regressor**
+## Project Structure
+- `linear_regression(X, y)`: Fits and evaluates a Linear Regression model.
+- `polynomial_regression(X, y, degree)`: Fits and evaluates a Polynomial Regression model with a given degree.
+- Model performance is visualized using Matplotlib.
+- R² scores for different models are saved to `regression_results.txt`.
 
-## Preprocessing Steps
-
-- Selected **first 3 features** from the dataset.
-- Applied **StandardScaler** to normalize feature values.
-- Split data into **80% training and 20% testing sets**.
-
-## Model Evaluation
-
-Each model is evaluated using **R² Score** (coefficient of determination), which indicates how well the model explains the variance in housing prices.
-
-- **Higher R² Score** = Better model performance.
-- Overfitting is checked by comparing **train vs. test R² scores**.
-- **Cross-validation** is used to verify consistency.
-
-## Results
-
-- **Linear Regression:** Baseline performance.
-- **Polynomial Regression:** Improves results but may overfit at high degrees.
-- **Ridge & Lasso Regression:** Helps in reducing overfitting.
-- **Random Forest:** Provides strong predictive power with non-linearity handling.
-
-## How to Run the Code
-
-1. Install dependencies:
+## How to Run the Project
+1. Install dependencies if not already installed:
    ```sh
    pip install numpy matplotlib scikit-learn
    ```
-2. Run the script:
+2. Run the Python script:
    ```sh
    python script.py
    ```
+3. The script will generate plots and save R² scores in `regression_results.txt`.
 
-## Visualization
+## Results
+- The Linear Regression model fits a straight line to the data.
+- Polynomial Regression models with degrees 2 to 5 capture nonlinear relationships.
+- A performance plot shows how R² scores change with polynomial degrees.
 
-- A **plot of Polynomial Regression performance** is generated to show R² Scores for different polynomial degrees.
+## Output Files
+- **Plots**: Regression results visualized.
+- **`regression_results.txt`**: Contains R² scores for all models.
 
-## Conclusion
-
-- **Linear Regression** is simple but limited.
-- **Polynomial Regression** captures non-linearity but risks overfitting.
-- **Regularized models (Ridge, Lasso)** improve generalization.
-- **Random Forest performs best**, leveraging non-linear relationships.
-
-## Author
-
-Developed by [Sabhi-ul-hassan]
+## License
+This project is for educational purposes and open for modifications and improvements.
 
